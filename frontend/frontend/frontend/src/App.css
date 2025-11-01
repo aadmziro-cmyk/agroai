@@ -1,0 +1,379 @@
+/* Основные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Шапка */
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  color: #2d3e50;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-bottom: 3px solid #00a85a;
+}
+
+.header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #00a85a, #008c4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header p {
+  opacity: 0.8;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Основной контейнер */
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+  min-height: calc(100vh - 160px);
+}
+
+/* Боковая панель */
+.sidebar {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar h3 {
+  margin-bottom: 1.5rem;
+  color: #2d3e50;
+  font-size: 1.3rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #00a85a;
+}
+
+/* Кнопки инструментов */
+.tool-btn {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  background: linear-gradient(135deg, #00a85a, #008c4a);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 168, 90, 0.3);
+}
+
+.tool-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 168, 90, 0.4);
+}
+
+/* Секции в сайдбаре */
+.sidebar-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.sidebar-section h4 {
+  margin-bottom: 1rem;
+  color: #2d3e50;
+  font-size: 1.1rem;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  background: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+.action-btn.small {
+  padding: 8px 12px;
+  font-size: 12px;
+  margin: 2px;
+}
+
+/* Основная область */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Карта-заглушка */
+.map-placeholder {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 2px dashed #00a85a;
+  border-radius: 20px;
+}
+
+.map-placeholder h2 {
+  color: #2d3e50;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.map-placeholder p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Статистика карты */
+.map-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stat {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 168, 90, 0.1);
+  border-radius: 12px;
+  min-width: 120px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00a85a;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Демо кнопки */
+.demo-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.demo-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.demo-btn.primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+.demo-btn.secondary {
+  background: rgba(108, 117, 125, 0.1);
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.demo-btn.success {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
+}
+
+.demo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Уведомление о карте */
+.map-notice {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.map-notice p {
+  margin: 0.5rem 0;
+  color: #856404;
+}
+
+/* Список полей */
+.fields-list {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #00a85a;
+}
+
+.section-header h3 {
+  color: #2d3e50;
+  font-size: 1.4rem;
+}
+
+.field-count {
+  background: #00a85a;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Карточки полей */
+.field-card {
+  background: white;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border-left: 5px solid #00a85a;
+  transition: all 0.3s ease;
+}
+
+.field-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.field-card.warning {
+  border-left-color: #ffc107;
+}
+
+.field-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.field-icon {
+  font-size: 1.5rem;
+}
+
+.field-header h4 {
+  flex: 1;
+  color: #2d3e50;
+  font-size: 1.2rem;
+}
+
+.field-health {
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.status-good {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.status-warning {
+  background: rgba(255, 193, 7, 0.1);
+  color: #856404;
+}
+
+.field-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field-info {
+  display: flex;
+  gap: 2rem;
+}
+
+.field-info span {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.field-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    width: 100%;
+  }
+  
+  .field-details {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .field-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .demo-buttons {
+    flex-direction: column;
+  }
+  
+  .map-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
